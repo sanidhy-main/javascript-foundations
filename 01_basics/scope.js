@@ -25,3 +25,4 @@ outer(); //Works, as all variables are in scope inside the function when being l
 //Note: The inner scope always overshadows any outer scope
 
 
+
