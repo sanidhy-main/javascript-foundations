@@ -7,10 +7,17 @@ const li = document.createElement("li");
 list.innerHTML = "";
 
 const incompleteUsers = users.filter(user => !user.completed);
+const completeUsers = users.filter(us => us.completed);
 incompleteUsers.forEach(user => {
     const li = document.createElement("li");
     li.textContent = "Name: " + user.name + " - Incomplete!";
     list.appendChild(li);
+});
+
+completeUsers.forEach(us => {
+    const lit = document.createElement("lit");
+    lit.textContent = "Name: " + us.name + " - Complete!";
+    list.appendChild(lit);
 });
 
 //Syntax
