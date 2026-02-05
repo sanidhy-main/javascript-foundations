@@ -31,7 +31,7 @@ javascript-foundations/
 │   └── arrays-objects.js
 │
 ├── 02_dom/
-│   ├── selectors.js
+│   ├── dom-manipulation.js
 │   ├── events.js
 │   └── dom-manipulation.js
 │
