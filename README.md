@@ -28,7 +28,7 @@ javascript-foundations/
 │   ├── conditionals.js
 │   ├── loops.js
 │   ├── scope.js
-│   ├── arrays.js
+│   ├── arrays-objects.js
 │   └── objects.js
 │
 ├── 02_dom/
