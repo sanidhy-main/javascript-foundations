@@ -1,10 +1,8 @@
 ﻿const users = [{id: 1, name: "A", completed: false},
     {id: 2, name: "B", completed: true}];
 
+const button = document.getElementById("btn");
 const list = document.getElementById("list");
-const li = document.createElement("li");
-
-list.innerHTML = "";
 
 const incompleteUsers = users.filter(user => !user.completed);
 const completeUsers = users.filter(us => us.completed);
@@ -19,6 +17,8 @@ completeUsers.forEach(us => {
     li.textContent = "Name: " + us.name + " - Complete!";
     list.appendChild(li);
 });
+
+console.log("selectors.js loaded", button, list);
 
 //Syntax
     //const element = document.getElementsById(id);
