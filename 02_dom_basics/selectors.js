@@ -15,9 +15,9 @@ incompleteUsers.forEach(user => {
 });
 
 completeUsers.forEach(us => {
-    const lit = document.createElement("li");
-    lit.textContent = "Name: " + us.name + " - Complete!";
-    list.appendChild(lit);
+    const li = document.createElement("li");
+    li.textContent = "Name: " + us.name + " - Complete!";
+    list.appendChild(li);
 });
 
 //Syntax
