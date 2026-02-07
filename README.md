@@ -33,7 +33,8 @@ javascript-foundations/
 ├── 02_dom/
 │   ├── selectors.js
 │   ├── events.js
-│   └── dom-manipulation.js
+│   ├── dom-manipulation.js
+│   └── to-do-project.js
 │
 ├── 03_async/
 │   ├── callbacks.js
@@ -47,6 +48,7 @@ javascript-foundations/
 │   └── api-response-handling.js
 |
 ├── index.html
+├── todo.html
 └── README.md
 ```
 ---
