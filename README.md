@@ -52,8 +52,10 @@ javascript-foundations/
 │   ├── style.css
 │   └── app.js
 │
-├── index.html
-├── todo.html
+├── testing/
+│   ├── index.html
+│   └── todo.html
+│
 └── README.md
 ```
 ---
