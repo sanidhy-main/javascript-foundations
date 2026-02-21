@@ -46,7 +46,12 @@ javascript-foundations/
 │   ├── json-basics.js
 │   ├── parse-stringify.js
 │   └── api-response-handling.js
-|
+│
+├── 05_mini-project/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+│
 ├── index.html
 ├── todo.html
 └── README.md
