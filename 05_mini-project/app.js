@@ -14,7 +14,8 @@ function addTask() {
 
     tasks.push({
         id: Date.now(), //adds an ID to each of the tasks
-        text: text //adds task to list
+        text: text, //adds task to list
+        completed: false //adds completion status to each task
     });
 
     input.value = ""; //cleans space
@@ -31,20 +32,43 @@ function renderTasks() {
         const li = document.createElement("li");
         li.textContent = task.text;
 
+        if (task.completed) {
+            li.style.textDecoration = "line-through";
+        }
+
+        li.addEventListener("click", () => {
+            toggleTask(task.id);
+        });
+
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
 
-        deleteBtn.addEventListener("click", () => {
+        deleteBtn.addEventListener("click", (event) => {
+            event.stopPropagation(); //To avoid triggering the 'li' click
             deleteTask(task.id);
         });
 
         li.appendChild(deleteBtn);
         list.appendChild(li);
     });
+}
 
     function deleteTask(id) {
         tasks = tasks.filter(task => task.id !== id);
         renderTasks();
     }
-}
+
+    function toggleTask(id) {
+        tasks = tasks.map(task => {
+            if (task.id === id) {
+                return {
+                    ...task,
+                    completed: !task.completed
+                };
+            }
+            return task;
+        });
+
+        renderTasks();
+    }
 });
