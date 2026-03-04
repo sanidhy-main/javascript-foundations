@@ -12,7 +12,10 @@ function addTask() {
         return;
     }
 
-    tasks.push(text); //adds task to list
+    tasks.push({
+        id: Date.now(), //adds an ID to each of the tasks
+        text: text //adds task to list
+    });
 
     input.value = ""; //cleans space
 
@@ -26,7 +29,7 @@ function renderTasks() {
 
     tasks.forEach(task => {
         const li = document.createElement("li");
-        li.textContent = task;
+        li.textContent = task.text;
         list.appendChild(li);
     });
 }
