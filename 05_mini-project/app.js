@@ -30,7 +30,21 @@ function renderTasks() {
     tasks.forEach(task => {
         const li = document.createElement("li");
         li.textContent = task.text;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+
+        deleteBtn.addEventListener("click", () => {
+            deleteTask(task.id);
+        });
+
+        li.appendChild(deleteBtn);
         list.appendChild(li);
     });
+
+    function deleteTask(id) {
+        tasks = tasks.filter(task => task.id !== id);
+        renderTasks();
+    }
 }
 });
