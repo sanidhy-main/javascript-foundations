@@ -52,7 +52,7 @@ javascript-foundations/
 │   ├── style.css
 │   └── app.js
 │
-├── testing/
+├── HTML Files/
 │   ├── index.html
 │   └── todo.html
 │
